@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="504.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+   <children>
+      <HBox fx:id="displayBox" alignment="CENTER_RIGHT" onMouseDragged="#displayGridDragged" onMousePressed="#displayGridPressed" prefHeight="75.0" prefWidth="504.0">
+         <children>
+            <Text fx:id="display" layoutX="452.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="478.0">
+               <font>
+                  <Font name="Heiti TC Light" size="45.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+      <GridPane fx:id="grid" prefHeight="233.0" prefWidth="504.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button layoutX="425.0" layoutY="31.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#dividePressed" styleClass="operators" text="/" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button layoutX="425.0" layoutY="91.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#multiplyPressed" styleClass="operators" text="X" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button layoutX="425.0" layoutY="140.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#minusPressed" styleClass="operators" text="-" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Button layoutX="38.0" layoutY="26.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#plusPressed" styleClass="operators" text="+" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button layoutX="425.0" layoutY="207.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ninePressed" styleClass="numbers" text="9" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button layoutX="316.0" layoutY="68.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sixPressed" styleClass="numbers" text="6" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button layoutX="316.0" layoutY="115.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#threePressed" styleClass="numbers" text="3" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button fx:id="equalTo" layoutX="316.0" layoutY="161.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#equalToPressed" text="=" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button layoutX="316.0" layoutY="207.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#eightPressed" styleClass="numbers" text="8" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button layoutX="223.0" layoutY="68.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#fivePressed" styleClass="numbers" text="5" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button layoutX="223.0" layoutY="115.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#twoPressed" styleClass="numbers" text="2" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button layoutX="223.0" layoutY="161.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pointPressed" styleClass="numbers" text="." GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button layoutX="223.0" layoutY="207.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sevenPressed" styleClass="numbers" text="7" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button layoutX="147.0" layoutY="68.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#fourPressed" styleClass="numbers" text="4" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button layoutX="147.0" layoutY="115.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onePressed" styleClass="numbers" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button layoutX="147.0" layoutY="161.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#zeroPressed" styleClass="numbers" text="0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button layoutX="437.0" layoutY="21.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#allClearPressed" styleClass="clearers" text="AC" GridPane.columnIndex="4" />
+            <Button layoutX="341.0" layoutY="21.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#lessThanEqualToPressed" styleClass="operators" text="&lt;=" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button layoutX="88.0" layoutY="68.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#greaterThanEqualToPressed" styleClass="operators" text="&gt;=" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button layoutX="88.0" layoutY="207.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#lessThanPressed" styleClass="operators" text="&lt;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button layoutX="45.0" layoutY="68.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#greaterThanPressed" styleClass="operators" text="&gt;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button layoutX="45.0" layoutY="115.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#equalsPressed" styleClass="operators" text="==" GridPane.rowIndex="4" />
+            <Button layoutX="166.0" layoutY="68.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openBracketPressed" styleClass="operators" text="(" GridPane.columnIndex="2" />
+            <Button layoutX="248.0" layoutY="21.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#closeBracketPressed" styleClass="operators" text=")" GridPane.columnIndex="3" />
+            <Button layoutX="330.0" layoutY="21.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#powerPressed" styleClass="operators" text="^" />
+            <Button layoutX="83.0" layoutY="207.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#orPressed" styleClass="operators" text="OR" GridPane.rowIndex="2" />
+            <Button layoutX="32.0" layoutY="21.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#andPressed" styleClass="operators" text="AND" GridPane.rowIndex="1" />
+            <Button layoutX="32.0" layoutY="115.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#notPressed" styleClass="operators" text="NOT" GridPane.rowIndex="3" />
+            <Button layoutX="452.0" layoutY="21.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#percentPressed" styleClass="operators" text="\%" GridPane.columnIndex="1" />
+            <Button layoutX="374.0" layoutY="21.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearPressed" styleClass="clearers" text="C" GridPane.columnIndex="5" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

@@ -1,0 +1,74 @@
+.root{
+    -fx-background:#FFFFFF;
+    -fx-font: 16px "Heiti TC"
+}
+
+#displayBox{
+    -fx-background-color:#ededed;
+}
+
+/*Buttons*/
+
+.button{
+/*    -fx-font: 16px "Serif Bold";*/
+    -fx-background-color: #F4F4F4;
+    -fx-border-radius:0;
+    -fx-background-radius:0;
+}
+.button:hover{
+    -fx-background-color: #DEDEDE;
+    
+}
+.button:focused{
+     -fx-focus-color: transparent;
+    -fx-background-insets: 0 0 0 0, 0, 0, 0;
+}
+.button:pressed{
+    -fx-background-color: #969696;
+}
+
+.numbers{
+    -fx-background-color: #ffffff;
+}
+.numbers:hover{
+    -fx-background-color: #fafafa;
+}
+.numbers:pressed{
+    -fx-background-color: #ebebeb;
+}
+.clearers{
+    -fx-background-color: #c6c6c6;
+}
+.clearers:hover{
+    -fx-background-color: #aaa9a8;
+}
+.clearers:pressed{
+    -fx-background-color: #898989;
+}
+.operators{
+    -fx-background-color: #e2e2e2;
+}
+
+.operators:hover{
+    -fx-background-color: #cccccc;
+}
+.operators:pressed{
+    -fx-background-color: #969696;
+}
+
+#equalTo{
+    -fx-background-color: #5d9fff;
+}
+#equalTo:hover{
+    -fx-background-color: #3084ff;
+}
+#equalTo:pressed{
+    -fx-background-color: #0061ed;
+}
+/*Grid*/
+
+#grid{
+    -fx-background-color:#ededed;
+    -fx-hgap:2px;
+    -fx-vgap:2px;        
+}
