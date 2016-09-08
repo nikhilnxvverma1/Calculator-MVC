@@ -1,4 +1,4 @@
-# Calculator-MVC
+# Calculator
 A neatly designed calculator app made in JavaFX
 
 The calculator supports full expression evaulation and also boolean operations(not shown below)
